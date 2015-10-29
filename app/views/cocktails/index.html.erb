@@ -1,0 +1,31 @@
+<div class="banner text-center" style="background-image: url('<%= image_url "home" %>')">
+  <div class="banner-gradient"></div>
+    <div class="banner-content">
+      <h1>COCKTHELL</h1>
+      <p>Blackout is not an option</p>
+      <%= link_to "Create a cocktail", new_cocktail_path, {class:"btn btn-success btn-lg"} %>
+  </div>
+</div>
+
+<h1 class="text-center">Cocktails list</h1>
+
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-sm-4">
+
+          <div class="card">
+            <span class="card-bg">
+              <%= image_tag "cocktail" %>
+            </span>
+            <span class="card-gradient"></span>
+            <div class="card-category"><%= cocktail.name %></div>
+            <span class="card-text"> </span>
+              <%= link_to cocktail_path(cocktail), {class:"card-link"} do %>
+              <% end %>
+          </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+

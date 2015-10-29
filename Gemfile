@@ -29,6 +29,12 @@ ruby '2.2.3'
 gem 'rails_12factor', group: :production
 gem 'puma',           group: :production
 
+gem 'bootstrap-sass'
+gem 'font-awesome-sass'
+gem 'simple_form'
+gem 'better_errors'
+gem "binding_of_caller"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
